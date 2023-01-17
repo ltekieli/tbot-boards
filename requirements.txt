@@ -1,0 +1,5 @@
+pyegctl
+pytest
+pytest-repeat
+tbot @ git+https://github.com/rahix/tbot@v0.10.6
+tftpy

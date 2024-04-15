@@ -8,7 +8,7 @@ class Visionfive2Board(connector.ConsoleConnector, board.PowerControl, board.Boa
     serial_port = "/dev/ttyUSB0"
 
     def connect(self, mach):
-        return mach.open_channel("picocom", "-b", str(self.baudrate), self.serial_port)
+        return mach.open_channel("picocom", "-q", "-b", str(self.baudrate), self.serial_port)
 
     def power_strip(self):
         return PowerStrip("192.168.10.20", 5000, "1", 0)
